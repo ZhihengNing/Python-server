@@ -1,6 +1,6 @@
 from flask import jsonify
 
-from core import failed, to_json_serializable
+from python_server.core import failed, to_json_serializable
 from . import analyse_app
 
 

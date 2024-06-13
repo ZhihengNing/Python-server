@@ -1,9 +1,8 @@
 from flask import jsonify
 
-from application.base_algorithm import BaseAlgorithm
-from core import ApiException
-from core.base_result import success
-from core.util import DictToObject, to_json_serializable
+from .base_algorithm import BaseAlgorithm
+from python_server.core import ApiException, success
+from python_server.core.util import DictToObject, to_json_serializable
 
 
 class AnalyseServer:

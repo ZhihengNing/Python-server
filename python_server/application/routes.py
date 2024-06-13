@@ -1,8 +1,9 @@
 from flask import request
 
-from core import BaseResult
+
 from . import analyse_app
 from .analyse_server import AnalyseServer
+from python_server.core import BaseResult
 
 
 @analyse_app.route('', methods=['POST'])
