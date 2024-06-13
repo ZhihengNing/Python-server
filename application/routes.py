@@ -1,11 +1,11 @@
 from flask import request
 
-from core import BaseResult, to_json_serializable, success
+from core import BaseResult
 from . import analyse_app
 from .analyse_server import AnalyseServer
 
 
-@analyse_app.route('/', methods=['POST'])
+@analyse_app.route('', methods=['POST'])
 def analyse() -> BaseResult:
     input_data = request.get_json()
     server = AnalyseServer.create()
@@ -15,5 +15,4 @@ def analyse() -> BaseResult:
 
 @analyse_app.route('/test', methods=['GET'])
 def test() -> str:
-    print(to_json_serializable(success("111")))
     return "test success"

@@ -12,3 +12,5 @@ class Algorithm(BaseAlgorithm):
                 "c": a / sum(b.c)
             }
         }
+
+

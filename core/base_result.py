@@ -7,7 +7,9 @@ def success(message: str | None = None, data=None):
     return BaseResult(*BaseResult.SUCCESS, data)
 
 
-def failed(message: str | None = None):
+def failed(code: int | None = None, message: str | None = None):
+    if code is not None and message is not None:
+        return BaseResult(code, message)
     if message is not None:
         return BaseResult(BaseResult.FAILED[0], message)
     return BaseResult(*BaseResult.FAILED)
