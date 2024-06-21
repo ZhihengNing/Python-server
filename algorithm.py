@@ -1,9 +1,10 @@
 import numpy as np
 
-from is3app import BaseAlgorithm
+from is3_analyse import BaseAlgorithm
 
 
 class Algorithm(BaseAlgorithm):
+
     def implement(self, a, b):
         return {
             'a': np.array([1, 3]),

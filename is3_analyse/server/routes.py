@@ -3,7 +3,7 @@ from flask import request
 
 from . import analyse_app
 from .analyse_server import AnalyseServer
-from python_server.core import BaseResult
+from is3_analyse.core import BaseResult
 
 
 @analyse_app.route('', methods=['POST'])

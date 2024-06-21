@@ -1,5 +1,6 @@
-import is3app
+
 from algorithm import Algorithm
+from is3_analyse import run
 
 if __name__ == "__main__":
-    is3app.run(Algorithm)
+    run(Algorithm)
