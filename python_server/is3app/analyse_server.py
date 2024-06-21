@@ -30,13 +30,10 @@ class AnalyseServer:
 
         param_data = []
         for param in param_names:
-            try:
-                data = input_data.get(param)
-                if isinstance(data, dict):
-                    data = DictToObject(data)
-                param_data.append(data)
-            except Exception as e:
-                raise e
+            data = input_data.get(param)
+            if isinstance(data, dict):
+                data = DictToObject(data)
+            param_data.append(data)
 
         data = self.algorithm.implement(*param_data)
         return jsonify(to_json_serializable(success(data=data)))

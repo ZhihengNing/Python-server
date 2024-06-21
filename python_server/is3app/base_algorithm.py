@@ -12,6 +12,10 @@ class BaseAlgorithm:
     def __init__(self) -> None:
         self.param_names = get_param_names(self.implement)
 
+    @staticmethod
+    def add_subclass(algorithm):
+        BaseAlgorithm.__subclasses__().append(algorithm)
+
     @abstractmethod
     def implement(self, *args, **kwargs):
         pass

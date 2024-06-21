@@ -1,6 +1,6 @@
 import numpy as np
 
-from application import BaseAlgorithm
+from is3app import BaseAlgorithm
 
 
 class Algorithm(BaseAlgorithm):
